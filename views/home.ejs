@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<style>
+    main.main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <%- include('./comp/navbar');  %> 
+        <main class="main">
+            <% if(user){ %>
+
+            <h1>hi <%= user%></h1>
+            <% } else { %>
+                <a href="/auth/login"><button class="home_login_btn">Login to Continue</button></a> 
+                <% } %> 
+        </main>
+    </div>
+    
+</body>
+</html>

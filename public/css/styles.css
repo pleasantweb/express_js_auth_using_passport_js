@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container nav {
+  width: inherit;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px;
+  -webkit-box-shadow: 0 10px 10px gray;
+          box-shadow: 0 10px 10px gray;
+}
+
+.container nav .logo a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.container nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav ul li {
+  font-size: 1.2rem;
+  color: gray;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.container main {
+  position: relative;
+  width: inherit;
+  height: calc(100vh - 60px);
+}
+
+.container main h1 {
+  font-size: 3rem;
+  color: gray;
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: underline;
+}
+
+.container main form {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container main form .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main form .row .full_column {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px 0;
+}
+
+.container main form .row .full_column label {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.container main form .row .full_column input[type=email] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.3rem;
+}
+
+.container main form .row .full_column input[type=password] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.3rem;
+}
+
+.container main form .row .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+}
+
+.container main form .row .column label {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.container main form .row .column input[type=text], .container main form .row .column input[type=password] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.3rem;
+}
+
+.container main form .row input[type=submit] {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0 40px;
+  border-radius: 20px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin-top: 40px;
+}
+
+.container main form .row input[type=submit]:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container main form .row .options {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.container main form .row .options button.btn {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  background: none;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.container main form .row .column_or {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container main form .row .column_or a button.btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0 40px;
+  border-radius: 20px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin-top: 40px;
+}
+
+.container main form .row .column_or a button.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container main button.home_login_btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0 40px;
+  border-radius: 20px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin-top: 40px;
+}
+/*# sourceMappingURL=styles.css.map */

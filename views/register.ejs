@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <%- include('./comp/navbar');  %> 
+        <main>
+            <h1>Register</h1>
+            <form action="/auth/register" method="post">
+                <div class="row">
+                    <div class="column">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name">
+                    </div>
+                    <div class="column">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="full_column">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="column">
+                        <label for="re_password">Confirm Password</label>
+                        <input type="password" name="re_password" >
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Sign Up">
+                    <div class="options">
+                        <p>Already a user ?</p>
+                        <a href="/auth/login">
+                            <button class="btn" type="button">Sign In</button>
+                        </a>
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column_or">
+                       
+                        <a href="/auth/google">
+                            <button type="button" class="btn">Signup with Google</button>
+                        </a>
+                    </div>
+                    
+                </div>
+               
+                
+               
+                
+               
+            </form>
+        </main>
+    </div>
+    
+</body>
+</html>
