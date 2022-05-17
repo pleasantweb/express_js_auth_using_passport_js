@@ -51,8 +51,9 @@ app.get('/',(req,res)=>{
 
 mongoose.connection.once('open',()=>{
     console.log('connect to mongodb');
-    app.listen(PORT,()=>{
-        console.log(`App is listening at port ${PORT}`);
-    })
+    
 })
 
+app.listen(PORT,()=>{
+    console.log(`App is listening at port ${PORT}`);
+})
