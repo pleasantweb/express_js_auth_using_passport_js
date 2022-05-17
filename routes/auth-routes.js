@@ -27,7 +27,7 @@ router.post('/register',async(req,res)=>{
         console.log(err);
         res.redirect('/auth/register')
     }
-    console.log(req.body);
+    // console.log(req.body);
     
 })
 //////////////////////////////////////////////////////////

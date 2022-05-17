@@ -12,7 +12,7 @@ function initializePassport(passport) {
         if(!foundUser) return done(null, false, { message: 'No user with that email' })
         try{
             if(await bcrypt.compare(password,foundUser.password)){
-                console.log(foundUser);
+                //console.log(foundUser);
                 return done(null,foundUser)
             }else{
                 return done(null,false,{ message: 'Password incorrect' })
@@ -27,11 +27,11 @@ function initializePassport(passport) {
    const authenticateGoogleUser=async(accessToken,refreshToken,profile,done)=>{
      const foundUser = await User.findOne({googleid:profile.id})
      if(foundUser){
-         console.log(foundUser);
+        //  console.log(foundUser);
          done(null,foundUser)
      }else{
-         console.log(profile.name.givenName);
-         console.log(profile.name.familyName);
+        //  console.log(profile.name.givenName);
+        //  console.log(profile.name.familyName);
          const newUser = await User.create({
              "first_name":profile.name.givenName || '',
              "last_name":profile.name.familyName || "",
@@ -58,9 +58,9 @@ function initializePassport(passport) {
 //////////////////////////////////////////////////////////// 
   passport.serializeUser((user, done) => done(null, user.id))
     passport.deserializeUser((id,done)=>{
-        console.log(id);
+        // console.log(id);
         User.findById(id).then((user)=>{
-            console.log(user);
+            // console.log(user);
            done(null,user)
        })
    })

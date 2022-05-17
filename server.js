@@ -40,10 +40,10 @@ app.set("view engine",'ejs')
 app.use('/auth',authRoutes)
 
 app.get('/',(req,res)=>{
-    console.log('user hai',req.user);
+    // console.log('user hai',req.user);
     
     const userName = req.user ? (req.user?.first_name + ' ' + req.user?.last_name) :  null
-    console.log('username',userName);
+    // console.log('username',userName);
     // console.log('isAuthenticated',req.isAuthenticated());
     res.render('home',{isAuthenticated:req.isAuthenticated(),user:userName })
 })
